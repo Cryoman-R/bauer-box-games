@@ -1,0 +1,111 @@
+.ticket-underline {
+    border-bottom: 2px solid black;
+    margin-bottom: 4px;
+}
+
+.ticket-btn {
+    font-weight: bold;
+    color: maroon;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 4px;
+    border: none;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+}
+
+.ticket-back {
+    padding: 8px;
+    background-size: 100%;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.5);
+}
+
+.ticket-back-o {
+    background-image: url("../images/ticket-back-o.png");
+}
+
+.ticket-back-p {
+    background-image: url("../images/ticket-back-p.png");
+}
+
+.ticket-back-r {
+    background-image: url("../images/ticket-back-r.png");
+}
+
+.ticket-back-m {
+    background-image: url("../images/ticket-back-m.png");
+}
+
+.ticket-back-a {
+    background-image: url("../images/ticket-back-a.png");
+}
+
+.ticket-back-b {
+    background-image: url("../images/ticket-back-b.png");
+}
+
+.ticket-back-c {
+    background-image: url("../images/ticket-back-c.png");
+}
+
+.ticket-back-d {
+    background-image: url("../images/ticket-back-d.png");
+}
+
+.ticket-back-e {
+    background-image: url("../images/ticket-back-e.png");
+}
+
+.ticket-back-s {
+    background-color: cornsilk; 
+    border-style: solid;
+    border-width: 2px;
+    border-color: khaki;
+}
+
+.ticket-btn-p {
+    background-color: cornflowerblue;
+}
+
+.ticket-btn-o {
+    background-color: darkseagreen;
+}
+
+.ticket-btn-r {
+    background-color: lavender;
+}
+
+.ticket-btn-m {
+    background-color: darksalmon;
+}
+
+.ticket-btn-a {
+    background-color: aquamarine;
+}
+
+.ticket-btn-b {
+    background-color: coral;
+}
+
+.ticket-btn-c {
+    background-color: aliceblue;
+}
+
+.ticket-btn-d {
+    background-color: gold;
+}
+
+.ticket-btn-e {
+    background-color: lightgreen;
+}
+
+.ticket-btn-s {
+    background-color: khaki;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gold;
+}
