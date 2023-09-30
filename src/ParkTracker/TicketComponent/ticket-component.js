@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/Row';
 
-import { TICKET_VALUES } from '../Utilities/constants';
+import { TICKET_VALUES } from '../../Utilities/constants';
 
 import './ticket-component.css';
 
@@ -16,7 +16,7 @@ function Ticket({addPoints, showToast, user, rideLog, attraction, points}) {
     let ticketCode;
 
     // Stylings based on the ticket type
-    switch (attraction.ticketValue) {
+    switch (attraction["ticket-value"]) {
         case 'O': 
             ticketCode = '$';
             btnType = "ticket-btn ticket-btn-o"; 
@@ -102,14 +102,14 @@ function Ticket({addPoints, showToast, user, rideLog, attraction, points}) {
     function logAttraction(attractionObj) {
         const timeStamp = new Date();
         const uId = user.id;
-        const attractionName = attractionObj.attractionName;
-        const pointUpdate = TICKET_VALUES[attractionObj.ticketValue];
+        const attractionName = attractionObj["attraction"];
+        const pointUpdate = TICKET_VALUES[attractionObj["ticket-value"]];
 
         let attractionText;
 
         addPoints(pointUpdate);
 
-        switch (attractionObj.ticketValue) {
+        switch (attractionObj["ticket-value"]) {
             case 'O': 
                 attractionText = "visited the shop";
             break;
@@ -136,7 +136,7 @@ function Ticket({addPoints, showToast, user, rideLog, attraction, points}) {
             time: timeStamp,
             user: uId,
             ride: attractionName,
-            ticket: attractionObj.ticketValue,
+            ticket: attractionObj["ticket-value"],
             currentPoints: points + pointUpdate
         });
     }
@@ -145,11 +145,11 @@ function Ticket({addPoints, showToast, user, rideLog, attraction, points}) {
         <Row style={{marginBottom: '8px'}}>
             <Container className={backType}>
                 <Row className='ticket-underline'>
-                    <b>{attraction.attractionName}</b>
+                    <b>{attraction["attraction"]}</b>
                 </Row>
                 <Row>
                     <Col xs={9}>
-                        {attraction.attractionType} 
+                        {attraction["attraction-type"]} 
                     </Col>
                     <Col xs={3}>
                         <button className={btnType}>{ticketCode}</button>
