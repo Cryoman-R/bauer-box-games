@@ -9,7 +9,7 @@ import "./honey-pot-component.css";
 
 const SERVER = "https://bauer-box-service.onrender.com";
 
-function HoneyPot() {
+const HoneyPot = () => {
     const [body, setBody] = useState(<></>);
     const [footer, setFooter] = useState(<></>);
     const [games, setGames] = useState([]);
@@ -126,11 +126,11 @@ function HoneyPot() {
                 <div style={{
                     overflow: "auto",
                     width: "100%",
-                    height: 600,
+                    height: 400,
                     flexDirection: "column",
                     justifyContent: "flex-start"
                 }}>
-                    {loading == true ? <h4>Loading Game List...</h4> : ""}   
+                    {loading === true ? <h4>Loading Game List...</h4> : ""}   
                     {renderGames()}
                 </div>
             </div>
@@ -140,7 +140,7 @@ function HoneyPot() {
                 onHide={() => setModalShow(false)}
             />
         </div>
-    )
+    );
 }
 
 export default HoneyPot;

@@ -1,18 +1,30 @@
 import homeIcon from "../images/home-icon.png";
 
+import { connect } from 'react-redux';
 import { Outlet, Link } from "react-router-dom";
+
+import React, { useState } from 'react';
 
 import "./header-component.css";
 
-function  Header() {
+const Header = (props) => {
     return (
         <div>
             <header className="header-component">
-                <Link to="/"><img src={homeIcon} alt="Home Icon" /></Link>
+                <Link to="/bauer.box"><img src={homeIcon} alt="Home Icon" /></Link>
+                <p style={{float: 'right'}}>{`${props.userDetails.username}`}</p>
             </header>
             <Outlet />
         </div>        
     );
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+    console.log('state', state);
+
+    return {
+        userDetails: state.login.userDetails,
+    }
+}
+
+export default connect(mapStateToProps, null) (Header);

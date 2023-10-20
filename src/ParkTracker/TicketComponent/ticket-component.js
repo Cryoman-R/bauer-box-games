@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/Row';
 
-import { TICKET_VALUES } from '../../Utilities/constants';
+import { TICKET_VALUES } from '../../AllApps/Store/constants';
 
 import './ticket-component.css';
 
@@ -97,6 +97,11 @@ function Ticket({addPoints, showToast, user, rideLog, attraction, points}) {
                 <Button onClick={() => logAttraction(attraction)}>Join Line</Button>
             );
         break;
+        default:
+            ticketCode = '-';
+            btnType = ''; 
+            backType = '';
+            action = (<></>);
     }
 
     function logAttraction(attractionObj) {

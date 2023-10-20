@@ -120,7 +120,7 @@ function DisneylandTracker() {
                 </Container>
             </div>
             <div className="card-basic"> 
-                {loading == true ? <h4>Loading Attraction List...</h4> : ""}               
+                {loading === true ? <h4>Loading Attraction List...</h4> : ""}               
                 {generateAttractionList()}
             </div>
             <ToastContainer className="p-3" position="bottom-center">
