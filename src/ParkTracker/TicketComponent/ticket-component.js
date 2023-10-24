@@ -3,6 +3,7 @@ import { CameraFill, ChatHeartFill, CupStraw } from 'react-bootstrap-icons';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/esm/Container';
+import React from 'react';
 import Row from 'react-bootstrap/Row';
 
 import { TICKET_VALUES } from '../../AllApps/Store/constants';

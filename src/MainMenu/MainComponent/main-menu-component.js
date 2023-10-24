@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import React from 'react';
 import Row from 'react-bootstrap/Row';
 
 import { Link } from "react-router-dom";

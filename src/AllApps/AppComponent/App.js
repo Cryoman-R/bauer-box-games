@@ -1,10 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from 'react';
 
-import DisneylandTracker from "./ParkTracker/MainComponent/disneyland-tracker-component";
-import MainMenu from "./MainMenu/MainComponent/main-menu-component";
-import Header from "./AllApps/HeaderComponent/header-component";
-import HoneyPot from "./HoneyPot/MainComponent/honey-pot-component";
-import Login from "./LoginComponent/MainComponent/login-component";
+import DisneylandTracker from "../../ParkTracker/MainComponent/disneyland-tracker-component";
+import MainMenu from "../../MainMenu/MainComponent/main-menu-component";
+import Header from "../HeaderComponent/header-component";
+import HoneyPot from "../../HoneyPot/MainComponent/honey-pot-component";
+import Login from "../LoginComponent/MainComponent/login-component";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';

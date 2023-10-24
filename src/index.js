@@ -1,4 +1,4 @@
-import App from './App';
+import App from './AllApps/AppComponent/App';
 import ConfigureStore from './AllApps/Store/ConfigStore'
 import React from 'react';
 import reportWebVitals from './reportWebVitals';

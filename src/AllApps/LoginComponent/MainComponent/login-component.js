@@ -3,9 +3,9 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
 import { connect } from 'react-redux';
-import { LoginAction} from '../../AllApps/Store/Actions/LoginAction';
+import { LoginAction} from '../../Store/Actions/LoginAction';
 import { useNavigate } from "react-router-dom";
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 
 const Login = (props) => {
     const navigate = useNavigate();

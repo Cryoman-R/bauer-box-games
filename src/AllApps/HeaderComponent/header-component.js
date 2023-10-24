@@ -3,7 +3,7 @@ import homeIcon from "../images/home-icon.png";
 import { connect } from 'react-redux';
 import { Outlet, Link } from "react-router-dom";
 
-import React, { useState } from 'react';
+import React from 'react';
 
 import "./header-component.css";
 

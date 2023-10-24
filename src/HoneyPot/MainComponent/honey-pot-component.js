@@ -93,8 +93,16 @@ const HoneyPot = () => {
                         <option>Game Type</option>
                         <option value="Board Game">Board Game</option>
                         <option value="Card Game">Card Game</option>
+                        <option value="Tile Game">Tile Game</option>
                         <option value="Video Game">Video Game</option>
                     </Form.Select>
+                </InputGroup>
+                <InputGroup>
+                    <Form.Check
+                        type="switch"
+                        id="custom-switch"
+                        label="Co-Op"
+                    />
                 </InputGroup>
                 <InputGroup className="mb-3">
                     <InputGroup.Text>Min / Max Players</InputGroup.Text>
