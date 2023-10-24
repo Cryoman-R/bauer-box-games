@@ -1,5 +1,3 @@
-
-
 export let USER = {
     id: "M.Money",
     fName: "Mark",

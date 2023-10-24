@@ -7,10 +7,11 @@ import ToastContainer from 'react-bootstrap/ToastContainer';
 
 import Ticket from '../TicketComponent/ticket-component'
 
-import { USER } from "../../Utilities/db-connect";
+import { API_SERVER } from '../../AllApps/Store/constants';
+import { USER } from "../../AllApps/Utilities/db-connect";
 import { React, useState, useEffect } from 'react';
 
-const SERVER = "https://bauer-box-service.onrender.com";
+const SERVER = API_SERVER
 
 let rideLog = []
 let user = USER;

@@ -1,3 +1,5 @@
+export const API_SERVER = "https://bauer-box-service.onrender.com";
+
 export const LOGIN_ACTION_KEY = "LOGIN_ACTION_KEY";
 
 export const TICKET_VALUES = {
