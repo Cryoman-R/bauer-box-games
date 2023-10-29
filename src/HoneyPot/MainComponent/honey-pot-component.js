@@ -24,6 +24,7 @@ const HoneyPot = () => {
     let gamePayload = {
         "is-co-op": isCoOp
     };
+    let winnerPayload = {}
 
     useEffect(() => {
         loadAllGameDetails();
@@ -63,6 +64,10 @@ const HoneyPot = () => {
             break;
             default:
         }
+    }
+
+    const handleGameWinnerChange = (e) => {
+        winnerPayload['winner'] = e.target.value;
     }
 
     const loadAllGameDetails = () => {
@@ -188,6 +193,7 @@ const HoneyPot = () => {
             <div>
                 <b>{game["game-type"]} </b>{coOp}<br />
                 <b>{game["min-players"]} - {game["max-players"]}</b> Players <br /> 
+                Played <b>{game["plays"]}</b> time(s) <br />
                 <b>Last Played</b> {null === game["last-played"] ? "" : format(new Date(game["last-played"]), 'MMMM do yyyy')} <br /> 
                 <b>Last Winner</b> {game["last-winner"]}
             </div>
@@ -195,10 +201,33 @@ const HoneyPot = () => {
         setFooter(
             <>
                 <Button variant="warning">Edit Details</Button>
-                <Button variant="primary">Play Game</Button> 
+                <Button variant="primary" onClick={() => playGame(game)}>Play Game</Button> 
             </>
         );
         setModalShow(true);
+    }
+
+    const playGame = (game) => {
+        setHeader(`Play ${game["game"]}`);
+        setBody(
+            <div>
+                <b>Date</b> {format(new Date(), 'MMMM do yyyy')}
+                <InputGroup className="mb-3">
+                    <Form.Select name="winner" aria-label="winner" onClick={handleGameWinnerChange} required>
+                        <option>Winner</option>
+                        <option value="Jackie Bauer">Jackie Bauer</option>
+                        <option value="Jonathan Hurlbut">Jonathan Hurlbut</option>
+                        <option value="Mark Bauer">Mark Bauer</option>
+                    </Form.Select>
+                </InputGroup>
+            </div>
+        );
+        setFooter(
+            <>
+                <Button variant="secondary" onClick={() => setModalShow(false)}>Cancel</Button>
+                <Button variant="primary" onClick={() => {}}>Submit</Button> 
+            </>
+        );
     }
 
     return (
